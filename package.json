@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "proxy" : "http://localhost:3004",
+  "proxy": "http://localhost:3300",
   "scripts": {
     "dev": "nodemon server",
     "serve": "node server"
   },
   "dependencies": {
     "cors": "^2.8.5",
+    "cros": "^1.0.1",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
