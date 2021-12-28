@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3004;
 const path = require('path');
 const cors = require('cors');
 
@@ -24,7 +24,7 @@ const corsOptions = {
 //     "optionsSuccessStatus": 204
 //   }
 
-app.use(cors(corsOptions))
+app.use(cors());
 app.use(express.static('public'));
 
 const connectDB = require('./config/db');
