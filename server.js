@@ -7,8 +7,10 @@ const cors = require('cors');
 
 // Cors 
 const corsOptions = {
-  origin: process.env.ALLOWED_CLIENTS.split(',')
+  origin: process.env.ALLOWED_CLIENTS.split(','),
   // ['http://localhost:3000', 'http://localhost:5000', 'http://localhost:3300']
+  credentials:true,            //access-control-allow-credentials:true
+    optionSuccessStatus:200
 }
 
 // Default configuration looks like
