@@ -21,26 +21,14 @@ app.use(express.static('public'));
 const connectDB = require('./config/db');
 connectDB();
 
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "http://127.0.0.1:3001"); // update to match the domain you will make the request from
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
 // Cors 
-var corsOptions = {
+const corsOptions = {
   origin: 'http://127.0.0.1:3001'
   // ['http://localhost:3000', 'http://localhost:5000', 'http://localhost:3300']
   
 }
-app.get('/api/files', cors(corsOptions), function (req, res, next) {
-  res.json({msg: 'This is CORS-enabled for only example.com.'})
-})
 
-app.listen(80, function () {
-  console.log('CORS-enabled web server listening on port 80')
-})
-
-app.use(cors(corsOptions))
+app.use(cors({origin: 'http://127.0.0.1:3001'}))
 app.use(express.json());
 
 app.set('views', path.join(__dirname, '/views'));
