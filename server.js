@@ -28,7 +28,7 @@ const corsOptions = {
   
 }
 
-app.use(cors({origin: 'http://127.0.0.1:3001'}))
+app.use(cors({origin: '*'}))
 app.use(express.json());
 
 app.set('views', path.join(__dirname, '/views'));
