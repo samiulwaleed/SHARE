@@ -8,7 +8,7 @@ const cors = require('cors');
 const corsOptions = {
 
 
-  origin:'http://127.0.0.1:3001', 
+  origin:'http://127.0.0.1:3001/index',  
     credentials:true,            
     //access-control-allow
     optionSuccessStatus:200
