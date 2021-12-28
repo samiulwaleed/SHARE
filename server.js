@@ -28,7 +28,7 @@ const corsOptions = {
   
 }
 
-app.use(cors(corsOptions))
+app.use(cors.corsOptions)
 app.use(express.json());
 
 app.set('views', path.join(__dirname, '/views'));
