@@ -27,11 +27,18 @@ app.use(function(req, res, next) {
   next();
 });
 // Cors 
-const corsOptions = {
+var corsOptions = {
   origin: 'http://127.0.0.1:3001'
   // ['http://localhost:3000', 'http://localhost:5000', 'http://localhost:3300']
   
 }
+app.get('/api/files', cors(corsOptions), function (req, res, next) {
+  res.json({msg: 'This is CORS-enabled for only example.com.'})
+})
+
+app.listen(80, function () {
+  console.log('CORS-enabled web server listening on port 80')
+})
 
 app.use(cors(corsOptions))
 app.use(express.json());
