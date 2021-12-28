@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "proxy": "http://127.0.0.1:3001/index.html",
+  "proxy": "http://localhost:3004",
   "scripts": {
     "dev": "nodemon server",
     "serve": "node server"
