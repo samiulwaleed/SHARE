@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "proxy": "https://sharing-mod.herokuapp.com",
+  "proxy": "http://127.0.0.1:3001/index",
   "scripts": {
     "dev": "nodemon server",
     "serve": "node server"
